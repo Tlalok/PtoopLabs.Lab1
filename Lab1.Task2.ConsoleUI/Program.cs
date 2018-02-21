@@ -27,6 +27,10 @@ namespace Lab2.Task2.ConsoleUI
             {
                 figure.Draw();
             }
+
+            var visitor = new JsonSerializerVisitor();
+            visitor.Visit(new Circle(new Point(10, 20), 10));
+            System.Console.WriteLine(visitor.Json);
         }
     }
 }
